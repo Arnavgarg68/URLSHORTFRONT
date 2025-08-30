@@ -1,0 +1,19 @@
+.landingPageBody{
+    background-color: black;
+    background-image: url('../../../public/images/particlesbackground.avif');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+.landingPageImage{
+    animation: float 1s infinite ease-in-out alternate-reverse;
+}
+@keyframes float {
+    0%{
+        transform: translate(0px , 0px);
+    }
+    100%{
+        transform: translate(0px , -15px);
+    }
+    
+}

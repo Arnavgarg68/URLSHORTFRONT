@@ -1,0 +1,40 @@
+.mainBody{
+    background-color: black;
+}
+.navBarLinkHover {
+    position: relative;
+    padding: 6px 10px;
+    cursor: pointer;
+    color: black; /* Optional */
+}
+
+/* Top & bottom borders using pseudo-elements */
+.navBarLinkHover::before,
+.navBarLinkHover::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    width: 70%;
+    height: 3px; /* Border thickness */
+    background-color: rgb(184, 47, 184);
+    transform: translateX(-50%) scaleX(0);
+    transform-origin: center;
+    transition: transform 0.3s ease;
+}
+
+/* Top border */
+.navBarLinkHover::before {
+    top: 0;
+}
+
+/* Bottom border */
+.navBarLinkHover::after {
+    bottom: 0;
+}
+
+/* Hover effect — expand from center */
+.navBarLinkHover:hover::before,
+.navBarLinkHover:hover::after {
+    transform: translateX(-50%) scaleX(1);
+}
+
